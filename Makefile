@@ -6,7 +6,7 @@
 #    By: welhox <welhox@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 11:59:53 by clundber          #+#    #+#              #
-#    Updated: 2023/12/14 13:24:35 by welhox           ###   ########.fr        #
+#    Updated: 2023/12/14 15:07:38 by welhox           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES)
 
-	ar rcs $(NAME) $(OFILES) $(IFLAGS)
+	ar rcs $(NAME) $(OFILES)
 
 clean:
 	rm -f $(OFILES) 
