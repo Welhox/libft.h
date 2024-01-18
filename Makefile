@@ -6,7 +6,7 @@
 #    By: clundber <clundber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 11:59:53 by clundber          #+#    #+#              #
-#    Updated: 2024/01/17 15:39:08 by clundber         ###   ########.fr        #
+#    Updated: 2024/01/18 10:59:03 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ GNL_FLS = $(GNL_DIR)/get_next_line.c $(GNL_DIR)/get_next_line_utils.c
 
 OFILES = $(SRC_FLS:.c=.o)
 
-#--------- FLAGS ----------
+#--------- FLAGS ----------#
 
 CC = @cc
 CFLAGS = -Wall -Wextra -Werror -I includes
