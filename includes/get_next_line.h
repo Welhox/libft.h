@@ -6,7 +6,7 @@
 /*   By: clundber <clundber@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:55:28 by clundber          #+#    #+#             */
-/*   Updated: 2024/02/07 14:30:11 by clundber         ###   ########.fr       */
+/*   Updated: 2024/02/08 14:26:54 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@
 # endif
 
 # include <stdlib.h>
+# include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_len(const char *s);
-char	*ft_strdup(const char *s);
 char	*get_next_line(int fd);
 int		gnlinecheck(char *str);
 char	*ft_reader(char *temp, int fd);
