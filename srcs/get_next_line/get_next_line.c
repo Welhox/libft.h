@@ -6,7 +6,7 @@
 /*   By: clundber <clundber@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:47:43 by clundber          #+#    #+#             */
-/*   Updated: 2024/02/07 14:30:47 by clundber         ###   ########.fr       */
+/*   Updated: 2024/02/08 17:02:33 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ char	*ft_reader(char *temp, int fd)
 		return (rd_check(buffer, temp, rd));
 	buffer[rd] = '\0';
 	if (!temp)
-		temp = ft_substr(buffer, 0, rd);
+		temp = ft_substr_gnl(buffer, 0, rd);
 	else
 	{
-		temp = ft_strjoin(ptr, buffer);
+		temp = ft_strjoin_gnl(ptr, buffer);
 		free (ptr);
 	}
 	free (buffer);
@@ -69,14 +69,14 @@ char	*ft_rowmaker(char *temp, char *row)
 	{
 		if (temp[i] == '\n')
 		{
-			row = ft_substr(temp, 0, i +1);
+			row = ft_substr_gnl(temp, 0, i +1);
 			if (!row)
 				return (0);
 			return (row);
 		}
 		else if (temp[i +1] == '\0')
 		{
-			row = ft_strdup(temp);
+			row = ft_strdup_gnl(temp);
 			if (!row)
 				return (0);
 			return (row);
@@ -117,7 +117,7 @@ char	*get_next_line(int fd)
 	if (gnlinecheck(row) == 1 && (ft_len(row) < ft_len(temp[fd])))
 	{
 		ptr = temp[fd];
-		temp[fd] = ft_substr(ptr, ft_len(row), ft_len(temp[fd]) - ft_len(row));
+		temp[fd] = ft_substr_gnl(ptr, ft_len(row), ft_len(temp[fd]) - ft_len(row));
 		ft_gnlfree(&ptr);
 		return (row);
 	}
